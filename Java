@@ -1,0 +1,65 @@
+const sexoCtx = document.getElementById('sexoChart').getContext('2d');
+const idadeCtx = document.getElementById('idadeChart').getContext('2d');
+const redeSocialCtx = document.getElementById('redeSocialChart').getContext('2d');
+const tempoCtx = document.getElementById('tempoChart').getContext('2d');
+const impactoCtx = document.getElementById('impactoChart').getContext('2d');
+
+const sexoChart = new Chart(sexoCtx, {
+    type: 'pie',
+    data: {
+        labels: ['Masculino', 'Feminino'],
+        datasets: [{
+            label: 'Sexo',
+            data: [40, 60],
+            backgroundColor: ['#36A2EB', '#FF6384'],
+        }]
+    }
+});
+
+const idadeChart = new Chart(idadeCtx, {
+    type: 'bar',
+    data: {
+        labels: ['16-18 anos', '40-50 anos', '30-40 anos'],
+        datasets: [{
+            label: 'Idade',
+            data: [85, 10, 5],
+            backgroundColor: ['#FFCE56', '#FF6384', '#36A2EB'],
+        }]
+    }
+});
+
+const redeSocialChart = new Chart(redeSocialCtx, {
+    type: 'bar',
+    data: {
+        labels: ['Instagram', 'TikTok', 'WhatsApp'],
+        datasets: [{
+            label: 'Rede Social',
+            data: [65, 30, 15],
+            backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56'],
+        }]
+    }
+});
+
+const tempoChart = new Chart(tempoCtx, {
+    type: 'bar',
+    data: {
+        labels: ['30-50 min', '1-1h30', '1h30-2h', '2h-3h30', 'Mais de 6 horas'],
+        datasets: [{
+            label: 'Tempo nas Redes Sociais',
+            data: [20, 10, 10, 20, 20],
+            backgroundColor: ['#36A2EB', '#FFCE56', '#FF6384', '#4BC0C0', '#9966FF'],
+        }]
+    }
+});
+
+const impactoChart = new Chart(impactoCtx, {
+    type: 'pie',
+    data: {
+        labels: ['Sim', 'Não', 'Não Sei'],
+        datasets: [{
+            label: 'Impacto na Saúde Mental',
+            data: [65, 10, 25],
+            backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56'],
+        }]
+    }
+});
